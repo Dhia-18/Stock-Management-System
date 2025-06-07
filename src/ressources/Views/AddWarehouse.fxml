@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.AddWarehouseController">
+   <children>
+      <Label layoutX="25.0" layoutY="24.0" text="Create Warehouse" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="24.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="72.0" text="Details">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="106.0" text="Warehouse Name" textFill="#868686" AnchorPane.rightAnchor="371.8">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="274.0" layoutY="106.0" text="Service" textFill="#868686">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameInput" layoutX="25.0" layoutY="125.0" prefHeight="35.0" prefWidth="200.0" promptText="Enter warehouse's name" AnchorPane.rightAnchor="275.0" />
+      <ChoiceBox fx:id="serviceInput" layoutX="274.0" layoutY="125.0" prefHeight="35.0" prefWidth="200.0" />
+      <Button fx:id="addButton" layoutX="25.0" layoutY="196.0" mnemonicParsing="false" onAction="#handleAddWarehouse" prefHeight="40.0" text="Add Warehouse" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.400000000000034" />
+      <Button fx:id="clearButton" layoutX="414.0" layoutY="27.0" mnemonicParsing="false" onAction="#clearData" text="Clear All" />
+      <Label layoutX="125.0" layoutY="105.0" text="*" textFill="RED" AnchorPane.rightAnchor="365.0" />
+      <Label layoutX="319.0" layoutY="105.0" text="*" textFill="RED" AnchorPane.leftAnchor="319.0" />
+   </children>
+</AnchorPane>

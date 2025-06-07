@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="654.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 15px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.SuppliersMenuController">
+   <children>
+      <Label layoutX="14.0" layoutY="13.0" text="Manage Suppliers" textFill="#0b201d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="30.0" />
+         </font>
+      </Label>
+      <HBox id="add-button" fx:id="addButton" layoutX="491.0" layoutY="13.0" onMouseClicked="#addSupplier" prefHeight="35.0" prefWidth="150.0" spacing="7.0" style="-fx-alignment: center; -fx-background-radius: 5;" stylesheets="@../Styles/Suppliers.css">
+         <children>
+            <ImageView fitHeight="15.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Plus-Logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Add New Supplier">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox id="filter-button" fx:id="filterBtn" layoutX="491.0" layoutY="59.0" onMouseClicked="#addFilter" prefHeight="35.0" prefWidth="150.0" spacing="7.0" stylesheets="@../Styles/Suppliers.css">
+         <children>
+            <ImageView fitHeight="15.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Filter-Logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Filter">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <StackPane layoutX="14.0" layoutY="110.0" prefHeight="310.0" prefWidth="626.0">
+         <children>
+            <TableView fx:id="suppliersTable" prefHeight="310.0" prefWidth="640.0" styleClass="tableView" stylesheets="@../Styles/Suppliers.css">
+               <columns>
+                  <TableColumn fx:id="nameCol" prefWidth="127.99996662139893" style="-fx-alignment: center; -fx-font-weight: bold;" text="Supplier Name" />
+                  <TableColumn fx:id="idCol" prefWidth="32.79998779296875" style="-fx-alignment: center; -fx-font-weight: bold;" text="ID" />
+                  <TableColumn fx:id="addressCol" prefWidth="111.19996643066406" style="-fx-alignment: center; -fx-font-weight: bold;" text="Address" />
+                  <TableColumn fx:id="emailCol" minWidth="6.4000244140625" prefWidth="112.00006103515625" style="-fx-alignment: center; -fx-font-weight: bold;" text="Email" />
+                  <TableColumn fx:id="phoneCol" prefWidth="112.79998779296875" style="-fx-alignment: center; -fx-font-weight: bold;" text="Phone" />
+                  <TableColumn fx:id="actionCol" prefWidth="132.79998779296875" style="-fx-alignment: center;" text="Actions" />
+               </columns>
+            </TableView>
+            <VBox id="filterBox" fx:id="filterBox" maxWidth="272.0" prefHeight="311.0" prefWidth="269.0" stylesheets="@../Styles/Suppliers.css">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="267.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0;" text="Filter">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <AnchorPane prefHeight="111.0" prefWidth="270.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0;">
+                     <children>
+                        <Button fx:id="addressResetBtn" layoutX="210.0" layoutY="18.0" mnemonicParsing="false" onAction="#resetAddress" text="Reset" />
+                        <Label layoutX="11.0" layoutY="18.0" prefHeight="26.0" prefWidth="54.0" text="Address">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="addressInput" layoutX="11.0" layoutY="56.0" prefHeight="32.0" prefWidth="246.0" promptText="Enter an address" AnchorPane.topAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="106.0" prefWidth="270.0" style="-fx-border-color: gray; -fx-border-width: 0 0 1 0;">
+                     <children>
+                        <Button fx:id="keywordResetBtn" layoutX="210.0" layoutY="23.0" mnemonicParsing="false" onAction="#resetKeyword" text="Reset" />
+                        <Label layoutX="11.0" layoutY="23.0" prefHeight="26.0" prefWidth="102.0" text="Keyword Search">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="keywordInput" layoutX="11.0" layoutY="53.0" prefHeight="32.0" prefWidth="246.0" promptText="Enter a keyword" />
+                     </children>
+                  </AnchorPane>
+                  <HBox alignment="CENTER" prefHeight="45.0" prefWidth="267.0" spacing="105.0">
+                     <children>
+                        <Button fx:id="resetAllBtn" mnemonicParsing="false" onAction="#resetAll" prefHeight="26.0" prefWidth="67.0" text="Reset All" />
+                        <Button fx:id="applyFilterBtn" mnemonicParsing="false" onAction="#applyFilter" prefHeight="26.0" prefWidth="80.0" text="Apply Now" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <StackPane.margin>
+                  <Insets left="355.0" />
+               </StackPane.margin>
+            </VBox>
+         </children>
+      </StackPane>
+      <HBox id="filter-button" fx:id="exportPdfButton" layoutX="14.0" layoutY="59.0" prefHeight="35.0" prefWidth="115.0" spacing="7.0" stylesheets="@../Styles/Inventory.css">
+         <children>
+            <ImageView fitHeight="15.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Export-Logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Export PDF">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox id="filter-button" fx:id="exportExcelButton" layoutX="138.0" layoutY="59.0" prefHeight="35.0" prefWidth="115.0" spacing="7.0" stylesheets="@../Styles/Inventory.css">
+         <children>
+            <ImageView fitHeight="15.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Export-Logo.png" />
+               </image>
+            </ImageView>
+            <Label text="Export Excel">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

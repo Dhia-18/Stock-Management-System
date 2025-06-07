@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.SettingsMenuController">
+   <children>
+      <Label layoutX="24.0" layoutY="24.0" text="Personal Info">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="55.0" text="Update your personal details" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelBtn" layoutX="344.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="30.0" prefWidth="66.0" text="Cancel" />
+      <Button fx:id="saveBtn" layoutX="419.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="30.0" prefWidth="65.0" text="Save" />
+      <Line endX="360.0" endY="1.52587890625E-5" layoutX="125.0" layoutY="88.0" startX="-100.0" />
+      <Label layoutX="24.0" layoutY="105.0" text="Your Photo" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="avatar" fitHeight="47.0" fitWidth="58.0" layoutX="138.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/User-Logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="uploadBtn" layoutX="199.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleUpload" prefHeight="30.0" prefWidth="93.0" text="Upload Image" />
+      <Label layoutX="299.0" layoutY="127.0" prefHeight="16.0" prefWidth="140.0" text="JPG or PNG, 1MB  max" textFill="#5e5d5d">
+         <font>
+            <Font name="Franklin Gothic Demi" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="360.0" endY="-7.62939453125E-6" layoutX="125.0" layoutY="181.0" startX="13.399993896484375" />
+      <Label layoutX="24.0" layoutY="192.0" text="Username" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameInput" layoutX="138.0" layoutY="210.0" prefHeight="32.0" prefWidth="348.0" promptText="Foulen" />
+      <Line endX="360.0" layoutX="125.0" layoutY="258.0" startX="13.399993896484375" />
+      <Label layoutX="24.0" layoutY="270.0" text="Full Name" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameInput" layoutX="138.0" layoutY="288.0" prefHeight="32.0" prefWidth="348.0" promptText="Foulen Filteni" />
+      <Label layoutX="24.0" layoutY="352.0" text="Email" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Line endX="360.0" endY="-7.62939453125E-6" layoutX="125.0" layoutY="344.0" startX="13.399993896484375" />
+      <TextField fx:id="emailInput" layoutX="137.0" layoutY="370.0" prefHeight="32.0" prefWidth="348.0" promptText="Foulen@gmail.com" />
+      <Line endX="360.0" endY="-7.62939453125E-6" layoutX="124.0" layoutY="421.0" startX="13.399993896484375" />
+      <PasswordField fx:id="passwordInput" layoutX="137.0" layoutY="441.0" prefHeight="32.0" prefWidth="348.0" promptText="*********" />
+      <Label layoutX="24.0" layoutY="432.0" text="Password" textFill="#5e5d5d">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

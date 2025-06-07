@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controllers.MainController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 15px;" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <ImageView fx:id="logoImage" fitHeight="46.0" fitWidth="46.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="42.0" layoutY="11.0" text="StoreWise" textFill="#103631">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="70.0" text="MENU" textFill="#acabab" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <HBox fx:id="dashboardMenu" layoutX="20.0" layoutY="85.0" onMouseClicked="#loadDashboard" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@../Images/Dashboard-Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Dashboard">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="productsMenu" layoutX="20.0" layoutY="120.0" onMouseClicked="#loadProducts" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Product-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Products">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="warehousesMenu" layoutX="20.0" layoutY="155.0" onMouseClicked="#loadWarehouses" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Warehouse-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Warehouses">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="suppliersMenu" layoutX="20.0" layoutY="190.0" onMouseClicked="#loadSuppliers" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Supplier-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Suppliers">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="customersMenu" layoutX="20.0" layoutY="225.0" onMouseClicked="#loadCustomers" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Customer-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Customers">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="ordersMenu" layoutX="20.0" layoutY="260.0" onMouseClicked="#loadOrders" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Orders-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Orders">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="inventoryMenu" layoutX="20.0" layoutY="295.0" onMouseClicked="#loadInventory" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Inventory-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Inventory">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label layoutX="20.0" layoutY="373.0" text="GENERAL" textFill="#acabab">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <HBox fx:id="settingsMenu" layoutX="20.0" layoutY="388.0" onMouseClicked="#loadSettings" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="0.8000000000000114">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Settings-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="25.0" prefWidth="150.0" text="Settings">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="logoutMenu" layoutX="24.0" layoutY="423.0" onMouseClicked="#handleLogout" prefHeight="35.0" prefWidth="260.0" spacing="10.0" style="-fx-alignment: Center-left;" styleClass="menu-item" stylesheets="@../Styles/Main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="-3.1999999999999886">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Exit-Logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label id="logoutLabel" prefHeight="25.0" prefWidth="150.0" stylesheets="@../Styles/Orders.css" text="Logout">
+                     <font>
+                        <Font name="Microsoft Sans Serif" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="222.0" layoutY="15.0" prefHeight="60.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 15px;" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <ImageView fx:id="avatarImage" fitHeight="40.0" fitWidth="40.0" layoutX="447.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/User-Logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nameLabel" layoutX="495.0" layoutY="14.0" text="Dhia Sarraj" textFill="#103631">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" layoutX="495.0" layoutY="30.0" text="sarrajdhia9999@gmail.com" textFill="#acabab" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="410.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Bell-Logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="13.0" text="Welcome back, Dhia!">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contentArea" layoutX="230.0" layoutY="81.0" prefHeight="430.0" prefWidth="654.0" style="-fx-background-color: #ebebeb; -fx-background-radius: 15px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="80.0" />
+   </children>
+</AnchorPane>

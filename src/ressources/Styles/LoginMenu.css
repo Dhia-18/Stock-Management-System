@@ -1,0 +1,12 @@
+#sign-button{
+    -fx-cursor:hand;
+    -fx-background-color:#456543;
+}
+
+#sign-button:hover{
+    -fx-background-color:#2c3b2b;
+}
+
+#username-error, #password-error{
+    visibility: visible;
+}

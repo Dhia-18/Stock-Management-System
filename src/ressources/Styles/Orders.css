@@ -1,0 +1,57 @@
+#add-button{
+    -fx-cursor:hand;
+    -fx-background-color: #1aa09e;
+}
+
+#add-button Label{
+    -fx-text-fill: white;
+}
+
+#add-button:hover{
+    -fx-background-color: #146665;
+}
+
+#filter-button{
+    -fx-cursor:hand;
+    -fx-alignment:center;
+    -fx-background-radius:5px;
+    -fx-border-radius:5px;
+    -fx-border-color:lightgray;
+}
+
+#filter-button:hover{
+    -fx-opacity: 0.7;
+}
+
+.tableView .shipBtn{
+    -fx-cursor:hand;
+    -fx-background-color:rgb(83, 174, 83);
+    -fx-text-fill: white;
+    -fx-font-weight:bold;
+}
+.tableView .cancelBtn{
+    -fx-cursor:hand;
+    -fx-background-color:red;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+}
+
+.tableView .shipBtn:hover, .tableView .cancelBtn:hover{
+    -fx-opacity: 0.7;
+}
+
+#filterBox{
+    -fx-border-color:gray;
+    -fx-background-color:rgb(219, 219, 219);
+    -fx-border-radius: 5;
+    -fx-background-radius:5;
+    visibility:none;
+}
+
+#logoutLabel{
+    -fx-text-fill:red;
+}
+
+#logoutLabel:hover{
+    -fx-text-fill: darkred;
+}

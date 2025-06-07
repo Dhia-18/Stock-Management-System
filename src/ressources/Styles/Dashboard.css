@@ -1,0 +1,11 @@
+.dashboard-card{
+    -fx-background-color:white;
+}
+
+.dashboard-card:hover{
+    -fx-background-color: linear-gradient(to bottom, #155233, #089f54);
+}
+
+.dashboard-card:hover Label{
+    -fx-text-fill:white;
+}

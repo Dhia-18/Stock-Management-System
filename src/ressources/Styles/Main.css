@@ -1,0 +1,11 @@
+.menu-item{
+    -fx-cursor:hand;
+}
+
+.menu-item Label{
+    -fx-text-fill: #acabab;
+}
+
+.menu-item:hover Label, .selected Label{
+    -fx-text-fill: #0b201d;
+}
