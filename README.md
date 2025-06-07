@@ -23,7 +23,7 @@ This project aims to create a highly reliable stock management application for u
 
 **Functionalities**:
 - Create/modify/delete articles
-- Search by characteristics (reference, expiration date, etc)
+- Search by characteristics (reference, expiration date...)
 - Assign articles to storage locations (full/partial)
 - Alert system for near-expiry items
 - Identify critical consumables
@@ -44,7 +44,7 @@ This project aims to create a highly reliable stock management application for u
 ![Suppliers Page](src/ressources/Images/Application%20Screenshoots/Suppliers_Page.png)
 
 ### 4. 🏫 University Service Management (Customers)
-*Services include*: Administration, Printing Services, Library, etc.
+*Services include*: Administration, Printing Services, Library...
 - Create/modify/delete customer services
 - Search services by characteristics
 
@@ -85,7 +85,7 @@ This project aims to create a highly reliable stock management application for u
 | Libraries               | Lib-1, Lib-2...                   |
 | Lecture Halls           | Hall-A, Hall-B...                 |
 | Classrooms              | A-11, A-12, B-15...               |
-| Administration Offices  | MainSecretariat, Office1, Office2 |
+| Administration Offices  | Office1, Office2...               |
 | ...                     | ...                               |
 
 ---
